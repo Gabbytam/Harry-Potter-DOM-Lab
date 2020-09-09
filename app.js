@@ -34,7 +34,7 @@ container.appendChild(h4Wand);
 let ul= document.createElement('ul');
 ul.setAttribute('data-storage','trunk');
 //console.log(ul);
-ul.innerText='Trunk';
+ul.innerText='Trunk:';
 container.appendChild(ul);
 
 
@@ -55,3 +55,80 @@ function addListItems() {
 } 
 //DONT FORGET TO CALL THE FUNCTION
 addListItems();
+
+let h5= document.createElement('h5');
+h5.innerText= 'Spring 2017';
+container.appendChild(h5);
+
+let table= document.createElement('table');
+container.appendChild(table);
+//console.log(table); //check if table is there 
+
+
+//creating and appending two table headings for Day and Classes, add to table 
+let tableHead= document.createElement('thead');
+table.appendChild(tableHead);
+
+let th1= document.createElement('th');
+th1.innerText= 'Day';
+let th2= document.createElement('th');
+th2.innerText= 'Classes';
+
+tableHead.appendChild(th1);
+tableHead.appendChild(th2);
+
+//creating and appending enough table rows so that table data can later be appended 
+let tableRow1= document.createElement('tr');
+table.appendChild(tableRow1);
+let tableRow2= document.createElement('tr');
+table.appendChild(tableRow2);
+let tableRow3= document.createElement('tr');
+table.appendChild(tableRow3);
+let tableRow4= document.createElement('tr');
+table.appendChild(tableRow4);
+let tableRow5= document.createElement('tr');
+table.appendChild(tableRow5);
+
+//creating, editing, and appending table datas for M-F, for day section 
+let td1= document.createElement('td');
+td1.innerText= 'Monday';
+tableRow1.appendChild(td1);
+
+let td2= document.createElement('td');
+td2.innerText= 'Tuesday';
+tableRow2.appendChild(td2);
+
+let td3= document.createElement('td');
+td3.innerText= 'Wednesday';
+tableRow3.appendChild(td3);
+
+let td4= document.createElement('td');
+td4.innerText= 'Thursday';
+tableRow4.appendChild(td4);
+
+let td5= document.createElement('td');
+td5.innerText= 'Friday';
+tableRow5.appendChild(td5);
+
+
+//creating table datas to go along side M-F, for the Classes section
+let td6= document.createElement('td');
+td6.innerText= 'Herbology & Potions & Quidditch practice';
+tableRow1.appendChild(td6);
+
+let td7= document.createElement('td');
+td7.innerText= 'Divination & Transfiguration';
+tableRow2.appendChild(td7);
+
+let td8= document.createElement('td');
+td8.innerText= 'History of Magic & Defense Against the Dark Arts';
+tableRow3.appendChild(td8);
+
+let td9= document.createElement('td');
+td9.innerText= 'Charms & Potions & Quidditch practice';
+tableRow4.appendChild(td9);
+
+let td10= document.createElement('td');
+td10.innerText= 'Transfiguration & Defense Against the Dark Arts';
+tableRow5.appendChild(td10);
+
