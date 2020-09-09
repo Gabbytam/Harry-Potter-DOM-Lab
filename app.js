@@ -34,7 +34,6 @@ container.appendChild(h4Wand);
 let ul= document.createElement('ul');
 ul.setAttribute('data-storage','trunk');
 //console.log(ul);
-ul.innerText='Trunk:';
 container.appendChild(ul);
 
 
@@ -188,3 +187,18 @@ let leash= document.querySelector('li.owl');
 leash.classList.add('cabbage'); //adds the class of cabbage using classList and add method
 //console.log(leash.classList); //checks to see if class is added 
 leash.classList.remove('cabbage'); //specify which value in the class list you want to remove
+
+h5.innerText= 'Fall 2018';
+
+let beer= document.createElement('li');
+beer.innerText= 'butter beer';
+
+//let beer= 'butter beer'; // doesnt work, have to set 'butter beer' as a list item element 
+ul.prepend(beer);
+
+ul.setAttribute('data-storage', 'chest'); //can use this to add more property names with different titles 
+
+let img= document.createElement('img');
+img.setAttribute('src', 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/harry-potter-dobby-1588983489.jpg?crop=0.532xw:0.519xh;0.311xw,0.134xh&resize=1200:*');
+container.append(img);
+
