@@ -154,7 +154,8 @@ container.insertBefore(h4Wand, ul); //container tells us where were inserting, i
 h4Wand.style.color= 'indigo';
 
 //this also works, does the same thing 
-//let pet= document.querySelector('h4.owl'); //!!!!!can use querySelector and dot notation to access an element by its tag AND its class name 
+//let pet= document.querySelector('h4.owl'); 
+//!!!!! ^ can use querySelector and dot notation to access an element by its tag AND its class name 
 //pet.remove();
 //container.append(pet);
 
@@ -164,3 +165,26 @@ container.append(h4);
 //pet comes back (dont have to remove it first)
 h4.remove();
 container.insertBefore(h4, h4Wand);
+
+//!!!!difference between append and appendChild, append can be used for stings while appendChild can be used for variables 
+
+let hide= document.querySelectorAll('li.secret');
+//console.log('test',hide);
+
+hide[0].remove();
+hide[1].remove();
+hide[2].remove();
+
+setTimeout(()=> {
+    ul.appendChild(hide[0]);
+    ul.appendChild(hide[1]);
+    ul.appendChild(hide[2]);
+},2000);
+
+let leash= document.querySelector('li.owl');
+//console.log(leash.classList); logs the class
+//leash.className= 'owl cabbage'; // worked but not the proper way to do it 
+
+leash.classList.add('cabbage'); //adds the class of cabbage using classList and add method
+//console.log(leash.classList); //checks to see if class is added 
+leash.classList.remove('cabbage'); //specify which value in the class list you want to remove
