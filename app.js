@@ -132,3 +132,35 @@ let td10= document.createElement('td');
 td10.innerText= 'Transfiguration & Defense Against the Dark Arts';
 tableRow5.appendChild(td10);
 
+
+h4Wand.remove(); //removes wand 
+
+//didnt work, trying to set the butter beer element to a variable and then remove 
+// let removeBeer= listItems[0];
+// console.log('test 2', removeBeer);
+// removeBeer.remove();
+
+//to remove the first li we had to: 
+document.querySelectorAll('li')[0].remove();
+//or document.querySelector('li').remove();
+
+h4Wand.innerText= 'New Wand';
+container.insertBefore(h4Wand, ul); //container tells us where were inserting, insertBefore takes two parameters, the first is the element to be added, and the second is where to add it before
+
+//ul.prepend(h4Wand); //prepend inserts it at the top of container and append inserts at the bottom 
+
+//h4.append(h4Wand); //this appends it as a child of the pet so all styling for the pet carries over to this
+
+h4Wand.style.color= 'indigo';
+
+//this also works, does the same thing 
+//let pet= document.querySelector('h4.owl'); //!!!!!can use querySelector and dot notation to access an element by its tag AND its class name 
+//pet.remove();
+//container.append(pet);
+
+//pet goes on a mission (dont have to remove it first)
+h4.remove();
+container.append(h4);
+//pet comes back (dont have to remove it first)
+h4.remove();
+container.insertBefore(h4, h4Wand);
