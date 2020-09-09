@@ -30,3 +30,28 @@ container.appendChild(h2);
 container.appendChild(h3);
 container.appendChild(h4);
 container.appendChild(h4Wand);
+
+let ul= document.createElement('ul');
+ul.setAttribute('data-storage','trunk');
+//console.log(ul);
+ul.innerText='Trunk';
+container.appendChild(ul);
+
+
+//to be able to see this function work, append the ul to the html(container specifically)
+let listItems= ['butter beer', 'invisible cloak', 'magic map', 'time turner', 'leash', 'Bertie Bott\'s Every Flavor [Jelly] Beans'];
+
+function addListItems() { 
+    for (var i = 0; i < listItems.length; i++) { 
+        let li= document.createElement('li');
+        li.innerText= listItems[i];
+        if(listItems[i]=== 'invisible cloak'|| listItems[i]==='magic map' || listItems[i]==='time turner'){
+            li.className= 'secret';
+        } else if(listItems[i]=== 'leash'){
+            li.className= 'owl';
+        }
+        ul.appendChild(li); 
+    } 
+} 
+//DONT FORGET TO CALL THE FUNCTION
+addListItems();
